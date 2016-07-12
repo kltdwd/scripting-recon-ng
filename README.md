@@ -4,6 +4,7 @@ inspired by @jhaddix bash script. Written in Python, just because I wanted to.
 Assumptions are;
 
 recon-ng is installed at '/usr/bin/recon-ng'
+
 downloaded wordlist of potential subdomains for bruteforcing - wordlist variable, line 12.
 
 Usage:
