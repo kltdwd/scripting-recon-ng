@@ -22,8 +22,7 @@ filename = domain + "-" + str(today) + ".resource"
 modules = {
     "recon/domains-hosts/google_site_web",
     "recon/domains-hosts/bing_domain_web",
-    "recon/domains-hosts/netcraft",
-    "recon/hosts-hosts/resolve"
+    "recon/domains-hosts/netcraft"
 }
 
 #create rc file with workspace.timestamp and start enumerating hosts
@@ -45,10 +44,10 @@ target.write("set WORDLIST " + wordlist + '\n')
 target.write("run" + '\n')
 
 target.write("use recon/hosts-hosts/resolve" + '\n')
+target.write("set SOURCE default" + '\n')
 target.write("run" + '\n')
 
 target.write("use reporting/csv" + '\n')
-target.write("set FILENAME " + dir + domain + ".csv" + '\n')
 target.write("run" + '\n')
 
 target.close()
